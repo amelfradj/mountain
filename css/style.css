@@ -2,34 +2,98 @@
     margin: 0;
     padding: 0;
 }
-
+html{
+    scroll-behavior: smooth; /****pour scroller avec un effet *****/
+}
+/****header**********/
 header {
-    height: 100vh;
-    background-image: url(montagne.jpg);
+    height: 100vh;/*** 100 viewport =toute la hauteur de lécran**/
+    background: url("../image/montagne.jpg") center bottom fixed; /**pour sortir d'un dossier faut taper ../*/
     background-size: cover;
-    background-attachment: fixed;
-    background-position: bottom; 
+}
+header nav{
+    width: 100%; /***preciser que elle fait 100%****/
+    position: fixed; /**fixer dans le scroll**/
+    top: 0;
+    left: 0;
+}
+header nav ul {
+    height: 50px; /**hauteur de la UL**/
+    display: flex; /**premettre aux enfants liste les uns a coté des autres**/
+    list-style: none; /* enleve les ronds de la liste */
+    align-items: center; /**répartition sur la hauteur**/
+    justify-content: flex-end; /*repartition sur la largeur*/
+
 }
 
+header nav ul li {
+    margin : 0 20px;
 
-ul {
-    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none; /* enleve le soulignement*/
+    color: white; /* couleur du texte*/
+    font-family: arial, Arial, Helvetica, sans-serif; /**change la famille de typo */
+    font-weight: bold; /**change la graisse de la typo*/
+    text-transform: uppercase; /**passe le texte en majiscule*/
+}
+header nav ul li a:hover {
+    border-bottom: 2px solid black; /** ajoute une bordure en bas lors du survol de couleur blanche */
+    opacity: 0.5; /**va creer une opacité au survol**/
+    color: black; /**couleur au survol du texte**/
+}
+header div{
+    height: calc(100vh - 50px);/**pour que la div occupe le reste de l'ecran on retire les 50px de la hauteur de la nav au 100vh(hauteur du header)**/
     display: flex;
-    flex-wrap: wrap;
-    justify-content: end;
-    gap: 20px;
-    margin-right: 20px;
-  }
+    justify-content: center;
+    align-items: center;
+    /*********fin header*****************************/
+}
+/*******style pour les deux section*****/
+section {
+    padding: 100px 0;
+}
+section h2{
+    text-align: center;
+    text-transform: capitalize;/**va mettre uen majuscule a la premiere lettre de tout les titres*/
 
-header > div {
-    height: calc(100vh - 70px);
-    background-image: url(../logo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+}
+section > div { /**selection les div de premier niveau (parent)**/
+    display: flex; /**permet aux div enfants de se mettre les unes 
+    à coté des autres**/
+    justify-content: center; /**permet de center les 3 div enfnats a linterieur de la div parent*/
 
-    
+
+}
+section >div >div{ /**selectionne les div enfants des div parents**/
+    width: 150px;   
+    height: 150px;
+    background: blue;
+    padding: 50px;
+    margin: 50px; /**eloigne les div l'une  des autres**/
+    box-sizing: border-box;
+}
+section:nth-of-type(2){ /**selection la deuxieme selection **/
+    background: teal;
+
+}
+section:nth-of-type(2) >div div {
+    background: white;
 }
 
-nav {
-    height: 70px;
+section:nth-of-type(2)>div>div {
+    background: white;
 }
+/*****************footer************/
+footer {
+    height: 400px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer p {
+    color: white;
+}
+

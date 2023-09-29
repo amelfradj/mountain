@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ex montagne</title> <!--60/65 caracteres s'affiche dans l'onglet-->
+    <meta name="descpription" content="descpription"><!--dans le content mettre la descrption plus marketing (160/165 caractére visible dans la recherche google
+        )-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!--début du site le header-->
     <header>
         <nav>
             <ul>
-                <li>VOYAGES</li>
-                <li>CARTES</li>
-                <li>CONTACTES</li>
+                <li> <a href="#voy"> VOYAGES</a> </li><!--mettre # a href squand on a pas remplis les lien et faire controle f pour retrouver-->
+                <li><a href="#carte"> CARTES</a></li>
+                <li> <a href="#cont"> CONTACT </a></li>
             </ul>
         </nav>
         <div >
-            
+            <img src="logo.svg" alt="legende de votre image"><!--visible en cas de lien cassé et pour les logiciels de deficience visuel-->
         </div>
     </header>
+    <!--fin du site-->
     <main>
-        <section>
-            <h2></h2>
+        <!--section 1-->
+        <section id="voy">
+            <h2>nos voyages</h2>
             <div>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
         </section>
-        <section><h2></h2>
+        <!--section-2-->
+        <section id="carte">
+            <h2> CARTES</h2>
             <div>
                 <div></div>
                 <div></div>
@@ -36,8 +43,11 @@
             </div>
 
         </section>
+        <!--fin de section-2-->
     </main>
-
+<footer id="cont">
+    <p>contact</p>
+</footer>
     
 </body>
 </html>
